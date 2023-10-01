@@ -59,6 +59,7 @@ main .personagem .imagem {
     min-height: 100vh;
     max-width: 380px;
     z-index: 1;
+    overflow-y: scroll;
 }
 
 .conteudo .nome-personagem {
@@ -75,7 +76,7 @@ main .personagem .imagem {
     font-family: "Rubik", sans-serif;
     line-height: 24px;
     overflow-y: scroll;
-    max-height: 600px;
+    max-height: 1200px;
 }
 
 .descricao::-webkit-scrollbar {
