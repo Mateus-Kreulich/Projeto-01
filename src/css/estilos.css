@@ -72,7 +72,7 @@ main .personagem .imagem {
     color: greenyellow;
     font-family: "Rubik", sans-serif;
     line-height: 24px;
-    max-width: 300px;
+    max-width: 80vh;
     overflow-y: auto;
 }
 
