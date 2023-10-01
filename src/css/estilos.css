@@ -73,6 +73,19 @@ main .personagem .imagem {
     font-family: "Rubik", sans-serif;
     line-height: 24px;
     overflow-y: scroll;
+    max-height: 600px
+}
+
+.descricao::-webkit-scrollbar {
+    width: 10px;
+}
+
+.descricao::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+.descricao::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 .conteudo .logo {
