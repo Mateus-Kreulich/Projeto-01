@@ -17,6 +17,7 @@ body {
     overflow: hidden;
     font-family: Arial, sans-serif;
     color: #ffffff;
+    overflow-y: scroll;
 }
 
 main::after {
