@@ -75,8 +75,9 @@ main .personagem .imagem {
     color: greenyellow;
     font-family: "Rubik", sans-serif;
     line-height: 24px;
+    display: flex;
     overflow-y: scroll;
-    max-height: 1200px;
+    max-height: 300px;
 }
 
 .descricao::-webkit-scrollbar {
