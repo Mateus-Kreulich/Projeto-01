@@ -1,0 +1,272 @@
+* {
+    transition: all 3s ease;
+}
+
+body,
+main,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg, #000000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    z-index: 0;
+    animation: gradientAnimation 3s infinite alternate;
+}
+
+main .personagem {
+    display: none;
+    height: 100vh;
+    transition: opacity 1s ease-in-out;
+}
+
+main .personagem.selecionado {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem {
+    font-size: 48px;
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    animation: colorChange 1s infinite alternate;
+    animation: colorChange 2s infinite alternate, floatAnimation 3s ease infinite;
+}
+
+.conteudo .descricao {
+    color: greenyellow;
+    font-family: "Rubik", sans-serif;
+    line-height: 24px;
+    max-width: 300px;
+    overflow-y: auto;
+}
+
+.conteudo .logo {
+    background-image: url("../imagens/one-piece-logo.png");
+    background-size: cover;
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 175px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.botoes .botao {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: scale(1);
+    box-shadow: none;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 25px cyan;
+    animation: pulse 1s infinite;
+}
+
+.botoes .botao:hover {
+    transform: scale(1.3);
+    box-shadow: 0 0 30px;
+    animation: colorChange 1s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    20% {
+        background-position: 20% 80;
+    }
+
+    35% {
+        background-position: 35% 65;
+    }
+
+    50% {
+        background-position: 50% 50;
+    }
+
+    65% {
+        background-position: 65% 35;
+    }
+
+    80% {
+        background-position: 80% 20;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: cyan;
+        /* Cor inicial */
+    }
+
+    10% {
+        color: greenyellow;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: orange;
+    }
+
+    40% {
+        color: orangered;
+    }
+
+    50% {
+        color: red;
+    }
+
+    60% {
+        color: orangered;
+    }
+
+    70% {
+        color: orange;
+    }
+
+    80% {
+        color: yellow;
+    }
+
+    90% {
+        color: greenyellow;
+    }
+
+    100% {
+        color: cyan;
+    }
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translate(0);
+    }
+
+    15% {
+        transform: translateY(10px);
+    }
+
+    30% {
+        transform: translateX(-10px);
+    }
+
+    70% {
+        transform: translateX(10px);
+    }
+
+    85% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
