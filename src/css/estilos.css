@@ -9,7 +9,6 @@ li {
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow-y: scroll;
 }
 
 body {
@@ -17,7 +16,6 @@ body {
     overflow: hidden;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    overflow-y: scroll;
 }
 
 main::after {
@@ -75,7 +73,7 @@ main .personagem .imagem {
     color: greenyellow;
     font-family: "Rubik", sans-serif;
     line-height: 24px;
-    display: flex;
+    display: none;
     overflow-y: scroll;
     max-height: 300px;
 }
